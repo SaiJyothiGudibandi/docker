@@ -6,7 +6,7 @@ properties([
 H 6,21 * * 3''')])
 ])
 
-nodeWithTimeout('docker') {
+nodeWithTimeout("${params.slave_name}") {
     deleteDir()
 
     stage('Checkout') {
